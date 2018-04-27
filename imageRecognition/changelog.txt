@@ -1,0 +1,138 @@
+Changelog
+=========
+
+### CraftAR Augmented Reality SDK - Android
+
+###### CraftAR SDK 5.2
+* Fixed: (Augmented Reality) On-device bundles now download the contents of the AR Items on the device when synchronizing the collection.
+* Fixed: (Augmented Reality) Error in 3D model caching (for Cloud AR items) that forced download of textures every time.
+
+###### CraftAR SDK 5.1.1
+* Fixed: (Augmented Reality) Fixed setting the translation and rotation properties of an ARItem when the “drawing off tracking” feature is active.
+
+###### CraftAR SDK 5.1.0
+* Changed: (Augmented Reality) New performance and quality improvements to our core tracking technology.
+* Added: (Augmented Reality) Allow to disable automatic AR content creation.
+* Added: (Augmented Reality) New method to control the maximum number of AR items that can be tracked simultaneously.
+* Added: (Common) Added the “Take picture” feature.
+* Added: (Common) New CraftARActivityCompat allows to use fragments with AppCompatActivity.
+* Fixed: (Augmented Reality) Fixed the toggle full screen feature on AR video contents (Android only).
+* Fixed: (Augmented Reality) Fixed infrequent crash on trackingStarted and trackingLost events.
+* Fixed: (Cloud Recognition) Prevent searches from producing results after stopFinder has been called.
+
+###### CraftAR SDK 5.0.1
+* Fixed: (Common) Changed native builds to fix crashes on Android 6 devices with Android 6 (6.0 - 6.0.1) installed.
+* Fixed: (Common) Fixed problems running on x86 devices.
+* Fixed: (Camera) Fixed error opening the camera on some devices.
+* Fixed: (Image Recognition) Fixed potential crashes if callback handlers are set to null.
+* Fixed: (Augmented Reality) Fixed touch events on videos with the transparency mask property set.
+
+###### CraftAR SDK 5.0
+* New: (Augmented Reality) This version of the SDK includes a new improved version of our tracking technology.
+* New: (Augmented Reality) Now you can add items to the tracking before the camera capture is started.
+* New: (Augmented Reality) Now you can directly load all AR items from an on-device collection to the Tracking at once.
+* Removed: (Common) Use of Apache HTTP libs.
+* Changed: (Augmented Reality) Performance improvements in the rendering of camera frames and AR contents.
+* Fixed: (Camera) Fixed errors with autofocus with some devices (e.g. Galaxy S8).
+* Fixed: (Camera) Fixed camera appearing distorted for some devices.
+
+##### CraftAR SDK 4.3
+* Added: (Camera) New methods to change the size of the picture when calling takePicture or singleShotSearch (getSupportedPictureSizes() and setPictureSizes())
+* Fixed: (Camera) Crash when starting the camera in some cases.
+* Fixed: (Camera) Single shot search failed in some devices because the picture size was not properly set up.
+* Fixed: (Cloud Image Recognition) Bounding boxes were incorrect in responses from the Cloud Recognition.
+* Fixed: (On-device Collections) Prevent crash and notify when the a null token is passed to the CollectionManager.
+* Fixed: (AR) Maintain the last rotation and translation when the tracking is lost.
+
+##### CraftAR SDK 4.2.1
+* Fix problem requesting custom data embedded.
+
+##### CraftAR SDK 4.2
+* New: Support for arm64 and x86 architectures (Note: the SDK is heavier, you can remove native folders or distribute them separately on Google Play). 
+* Changed: Update included library that produced lots of warnings
+* Fixed: Crash on some devices caused by the processing of the camera frames.
+* Fixed: Network issues on Android < 4.4 if TLS 1.0 is not supported by the remote servers.
+* Fixed: Add missing methods to set the rotation and translation of an AR item when rendering off-tracking.
+
+##### CraftAR SDK 4.1
+* Advanced On-device collection synchronization (only downloads changes)
+* Added method to check how good an image is for AR on the device
+* Fix freeze when restarting camera
+* Fix error where AR Items did not load when installing app in SD Card.
+
+##### CraftAR SDK 4.0.3
+* Request bounding boxes by default in cloud-recognition
+* Return image recognition score as an integer instead of a float.
+* Return appropiate network error codes when network request fail (CraftARNetworkError)
+* Functions to add/remove contents from a CraftARItemAR
+* CraftARTracking.addItem() function returns now an error instead of throwing an exception
+* Fix issue with video contents not stopped when 'stopTracking' was called. 
+* Fix contentLoadFinzalized getting called twice in video contents
+* Fix issue in Cloud recognition, that was calling at the same time searchResults() and searchFailed() if there was an exception in the searchResults() method
+* Fix invalid preview orientation on some tablet devices
+
+###### CraftAR SDK 4.0.2
+* Improve re-scaling for large pictures
+* Fixes preview orientation issue on  Nexus 5x
+* Add support to use the flashlight in the camera class
+
+###### CraftAR SDK 4.0.1
+* Fix crash on devices with Android < 4.2
+
+###### CraftAR SDK 4.0.
+* New SDK architecture
+* Now with on-device Augmented Reality.
+* Improved tracking and HD capture available
+
+###### CraftAR SDK 3.0.3
+* Fix preview orientation in tablet devices.
+* Fix content resources not being released for individual content removal.
+
+###### CraftAR SDK 3.0.2
+* Fix camera issues with some devices.
+* Fix rendering captured frames in some devices.
+
+###### CraftAR SDK 3.0.1
+* Prevent crash when opening camera and camera is already open.
+
+###### CraftAR SDK 3.0
+* Fixed bugs for Android 5.0 (L)
+* Faster recognition by using my.craftar.net (points to the geographically closest server)
+* The SDK package is now com.craftar
+* The SDK classes are now called **CraftARxxx**
+* The CloudRecognitionItem class is now called **CraftARItem**
+* Fix alpha rendering for contents
+* Stability Fixes
+* Added off-tracking content rendering capabilities
+
+
+###### CraftAR SDK 2.2
+* Several stability fixes
+* Improved support for video contents
+* Improved camera capture performance
+* Updated internal OpenSSL lib
+* Minimum API level support changed to HONEYCOMB+ (API level 11+) 
+
+###### CraftAR SDK 2.1.1
+* Fixed problem with camera when going to background for some devices
+* Improved camera preview performance
+
+###### CraftAR SDK 2.1.0
+* Fixed crash with landscape activities
+* Fixed red flashing issue
+* Fixed crash with some devices when opening camera (Galaxy S4 and others)
+* Fixed problems when closing while initialising
+* Fixed some issues with Finder mode when going to background (CRS calls accumulating)
+* Added autofocus camera feature
+* Support for Image Recognition on Android 2.3 (AR is not tested, video contents not supported)
+
+###### CraftAR SDK 2.0.1
+* Fixed bug in content scale
+
+###### CraftAR SDK 2.0
+* Now with Augmented Reality
+
+-----
+###### Catchoom Technologies S.L.
+
+
